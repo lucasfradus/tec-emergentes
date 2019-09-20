@@ -1,0 +1,39 @@
+
+  <h2>Nuevo Producto</h2>
+
+    <form action="/Productos/Add" method="POST">
+<div class="input-group">
+  <div class="col-md-4">
+    <label for="basic-url">Nombre</label>
+    <input name="nombre" type="text" class="form-control" id="nombre" value="{{#if body.nombre}}{{body.nombre}}{{/if}}">
+    {{#if errors.nombre}}
+      <small class="text-danger">
+          {{errors.nombre.msg}}
+        </small>      
+    {{/if}}
+  </div>
+  <div class="col-md-4">
+    <label for="basic-url">Precio</label>
+    <input name="precio" type="text" class="form-control" id="precio" value="{{#if body.precio}}{{body.precio}}{{/if}}">
+    {{#if errors.precio}}
+      <small class="text-danger">
+          {{errors.precio.msg}}
+        </small>      
+    {{/if}}
+  </div>
+  <div class="col-md-4">
+    <label for="basic-url">Stock</label>
+    <input name="stock" type="text" class="form-control" id="stock" value="{{#if body.stock}}{{body.stock}}{{/if}}">
+    {{#if errors.stock}}
+      <small class="text-danger">
+          {{errors.stock.msg}}
+        </small>      
+    {{/if}}
+  </div>
+</div>
+<br>
+<div class="input-group col-md-4">
+        <input type="submit" value="Nuevo Producto" class="btn btn-reverse">
+</div>
+    </form>
+

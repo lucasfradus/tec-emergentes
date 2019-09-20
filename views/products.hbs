@@ -1,0 +1,74 @@
+<section>
+  <div class="col-md-2">
+    <h1>Productos</h1>
+  </div>
+  <div class="col-md-2">
+    <a href="/Productos/add" class="btn btn-sm btn-primary">Agregar</a>
+  </div>
+  
+{{#if prod.length}}
+  <div class="form-row">
+        <div class="form-group col-md-2">
+        </div>   
+    <div class="table-wrapper col-md-8">
+        
+         <table class="table table-hover">
+                <caption>Listado de Productos</caption>
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+               <tbody>
+         
+{{/if}}           
+      {{#each prod}}
+        <tr>
+            <td>#{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{stock}}</td>
+            <td>{{precio}}</td>
+            <td>
+            <a href="/Productos/edit/{{id}}" class="btn btn-sm btn-success">Editar</a>
+            <a href="/Productos/delete/{{id}}"  class="btn btn-sm btn-danger">Eliminar</a>
+            </td>
+        </tr>
+     {{else}}
+            <p class="text-center">No hay productos cargados. ingrese <a href="/Productos/add" ><button class="launch">acá</button> </a> para agregarlos.</p>
+      {{/each}}
+  </section>
+
+
+
+
+{{!--
+<section id="gigs" class="container">
+    <h1>Productos</h1>
+
+    {{#each prod}}
+    <div class="gig">
+      <h3>{{nombre}}</h3>
+      <ul>
+        <li>Precio: {{precio}}</li>
+      </ul>
+      <ul>
+        <li>Stock: {{stock}}</li>
+      </ul>
+      <div class="tech">
+        <p><small>Creado: <span>{{createdAt}}</span></small></p>
+        <p><small>Ultima Modificacion: <span>{{updatedAt}}</span></small></p>
+      </div>
+    </div>
+    {{else}}
+
+    {{/each}}
+ 
+
+  </section>
+
+  --}}

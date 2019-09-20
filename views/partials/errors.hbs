@@ -1,0 +1,25 @@
+ {{#if messages.info}}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{messages.info}}
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> 
+      {{/if}}
+      
+      {{#if messages.danger}}
+        <div class="alert alert-danger  alert-dismissible fade show" role="alert">
+          {{messages.danger}}
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>  
+      {{/if}}
+      {{#if messages.success }}
+        <div class="alert alert-success   alert-dismissible fade show" role="alert">
+          {{messages.success}}
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>  
+      {{/if}}
