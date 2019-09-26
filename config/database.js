@@ -10,3 +10,8 @@ module.exports = new Sequelize('emergentes', 'root', '', {
       idle: 10000
     }
   });
+
+
+  //vha3AwSe1uJllg4KTT1a pwd aws
+
+  
